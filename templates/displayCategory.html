@@ -1,0 +1,16 @@
+<html>
+
+<body>
+    <h1>Catalog App</h1>
+    <p>
+        <h2>{{c.name}} Items</h2>
+    </p>
+    {% for i in items %}
+        <p>
+            <a href='{{url_for("displayItem", category = c.name, title = i.name)}}'>{{i.name}}</a>
+        </p>
+    {% endfor %}
+
+    
+</body>
+</html>

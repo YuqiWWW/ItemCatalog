@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>Catalog App</h1>
+<h2>Edit Item</h2>
+
+<form action="{{url_for('editItem', title = i.name)}}" method = 'POST'>
+<p>
+    Title: 
+</p>
+<input type='text' id='name' size='30' name='Title' placeholder="{{i.name}}">
+<p>
+    Description: 
+</p>
+<input type='text' id='description' size='60' name='Description' placeholder="{{i.description}}">
+<select id='category'name='Category'>
+    {% for c in cs %}
+    <option value='{{c.id}}'>{{c.name}}</option>
+    {% endfor %}
+</select>
+
+<input type='submit' value='Submit'>
+
+</form>
+
+</body>
+</html>
